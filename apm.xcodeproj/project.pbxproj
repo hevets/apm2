@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		C49C2BEB1D9D851C0051B9D8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C49C2BEA1D9D851C0051B9D8 /* AppDelegate.m */; };
 		C49C2BEE1D9D851C0051B9D8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C49C2BED1D9D851C0051B9D8 /* main.m */; };
-		C49C2BF11D9D851C0051B9D8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C49C2BF01D9D851C0051B9D8 /* ViewController.m */; };
 		C49C2BF31D9D851C0051B9D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C49C2BF21D9D851C0051B9D8 /* Assets.xcassets */; };
 		C49C2BF61D9D851C0051B9D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C49C2BF41D9D851C0051B9D8 /* Main.storyboard */; };
 		C49C2C011D9D851C0051B9D8 /* apmTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C49C2C001D9D851C0051B9D8 /* apmTests.m */; };
 		C49C2C0C1D9D851C0051B9D8 /* apmUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C49C2C0B1D9D851C0051B9D8 /* apmUITests.m */; };
+		C49C2C1D1D9D885B0051B9D8 /* APM.m in Sources */ = {isa = PBXBuildFile; fileRef = C49C2C1C1D9D885B0051B9D8 /* APM.m */; };
+		C49C2C201D9D8AD30051B9D8 /* ApmStatusItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C49C2C1F1D9D8AD30051B9D8 /* ApmStatusItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +39,6 @@
 		C49C2BE91D9D851C0051B9D8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C49C2BEA1D9D851C0051B9D8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C49C2BED1D9D851C0051B9D8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		C49C2BEF1D9D851C0051B9D8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		C49C2BF01D9D851C0051B9D8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		C49C2BF21D9D851C0051B9D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C49C2BF51D9D851C0051B9D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C49C2BF71D9D851C0051B9D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +48,10 @@
 		C49C2C071D9D851C0051B9D8 /* apmUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = apmUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C49C2C0B1D9D851C0051B9D8 /* apmUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = apmUITests.m; sourceTree = "<group>"; };
 		C49C2C0D1D9D851C0051B9D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C49C2C1B1D9D885B0051B9D8 /* APM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APM.h; sourceTree = "<group>"; };
+		C49C2C1C1D9D885B0051B9D8 /* APM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APM.m; sourceTree = "<group>"; };
+		C49C2C1E1D9D8AD30051B9D8 /* ApmStatusItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApmStatusItem.h; sourceTree = "<group>"; };
+		C49C2C1F1D9D8AD30051B9D8 /* ApmStatusItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApmStatusItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +102,9 @@
 		C49C2BE81D9D851C0051B9D8 /* apm */ = {
 			isa = PBXGroup;
 			children = (
-				C49C2BE91D9D851C0051B9D8 /* AppDelegate.h */,
-				C49C2BEA1D9D851C0051B9D8 /* AppDelegate.m */,
-				C49C2BEF1D9D851C0051B9D8 /* ViewController.h */,
-				C49C2BF01D9D851C0051B9D8 /* ViewController.m */,
-				C49C2BF21D9D851C0051B9D8 /* Assets.xcassets */,
-				C49C2BF41D9D851C0051B9D8 /* Main.storyboard */,
-				C49C2BF71D9D851C0051B9D8 /* Info.plist */,
+				C49C2C241D9DBBE30051B9D8 /* Models */,
+				C49C2C1A1D9D88210051B9D8 /* Storyboard */,
+				C49C2C191D9D880D0051B9D8 /* Controllers */,
 				C49C2BEC1D9D851C0051B9D8 /* Supporting Files */,
 			);
 			path = apm;
@@ -114,6 +113,10 @@
 		C49C2BEC1D9D851C0051B9D8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C49C2BE91D9D851C0051B9D8 /* AppDelegate.h */,
+				C49C2BEA1D9D851C0051B9D8 /* AppDelegate.m */,
+				C49C2BF21D9D851C0051B9D8 /* Assets.xcassets */,
+				C49C2BF71D9D851C0051B9D8 /* Info.plist */,
 				C49C2BED1D9D851C0051B9D8 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -135,6 +138,32 @@
 				C49C2C0D1D9D851C0051B9D8 /* Info.plist */,
 			);
 			path = apmUITests;
+			sourceTree = "<group>";
+		};
+		C49C2C191D9D880D0051B9D8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C49C2C1E1D9D8AD30051B9D8 /* ApmStatusItem.h */,
+				C49C2C1F1D9D8AD30051B9D8 /* ApmStatusItem.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		C49C2C1A1D9D88210051B9D8 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				C49C2BF41D9D851C0051B9D8 /* Main.storyboard */,
+			);
+			name = Storyboard;
+			sourceTree = "<group>";
+		};
+		C49C2C241D9DBBE30051B9D8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C49C2C1B1D9D885B0051B9D8 /* APM.h */,
+				C49C2C1C1D9D885B0051B9D8 /* APM.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,9 +301,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C49C2BF11D9D851C0051B9D8 /* ViewController.m in Sources */,
+				C49C2C1D1D9D885B0051B9D8 /* APM.m in Sources */,
 				C49C2BEE1D9D851C0051B9D8 /* main.m in Sources */,
 				C49C2BEB1D9D851C0051B9D8 /* AppDelegate.m in Sources */,
+				C49C2C201D9D8AD30051B9D8 /* ApmStatusItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,21 +7,22 @@
 //
 
 #import "AppDelegate.h"
+#import "APM.h"
+#import "ApmStatusItem.h"
 
 @interface AppDelegate ()
-
+@property (nonatomic, strong) ApmStatusItem *statusItem;
+@property (nonatomic, strong) APM *apm;
 @end
 
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    // Insert code here to initialize your application
+    _apm = [[APM alloc] init];
+    _statusItem = [[ApmStatusItem alloc] init];
+    _statusItem.delegate = _apm;
 }
 
-
-- (void)applicationWillTerminate:(NSNotification *)aNotification {
-    // Insert code here to tear down your application
-}
 
 
 @end
