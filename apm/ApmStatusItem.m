@@ -1,11 +1,3 @@
-//
-//  ApmStatusItem.m
-//  apm
-//
-//  Created by Steve Henderson on 2016-09-29.
-//  Copyright © 2016 Steve Henderson. All rights reserved.
-//
-
 #import "ApmStatusItem.h"
 
 @interface ApmStatusItem()
@@ -31,7 +23,7 @@
 }
 
 -(void)configureItemProperties {
-    _item.title = @"amp";
+    _item.title = @"0";
 }
 
 -(void)configureItemMenu {

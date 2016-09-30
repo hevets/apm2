@@ -6,5 +6,4 @@
 
 @property (nonatomic, strong) NSStatusItem *item;
 -(void)apmHasUpdated:(NSString *)updatedApm;
-
 @end

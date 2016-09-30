@@ -1,11 +1,3 @@
-//
-//  AppDelegate.m
-//  apm
-//
-//  Created by Steve Henderson on 2016-09-29.
-//  Copyright © 2016 Steve Henderson. All rights reserved.
-//
-
 #import "AppDelegate.h"
 #import "APM.h"
 #import "ApmStatusItem.h"
@@ -18,13 +10,19 @@
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    _apm = [[APM alloc] init];
-    _statusItem = [[ApmStatusItem alloc] init];
-    
-    // binds the _statusItem as the delegate
-    [_apm setDelegate:_statusItem];
+    [self checkAccessibility];
+    [self startApp];
 }
 
+-(void)checkAccessibility {
+    NSDictionary *options = @{(id)CFBridgingRelease(kAXTrustedCheckOptionPrompt) : @YES};
+    _accessibilityEnabled = AXIsProcessTrustedWithOptions((CFDictionaryRef)options);
+}
+
+-(void)startApp {
+    _statusItem = [[ApmStatusItem alloc] init];
+    _apm = [[APM alloc] initWithDelegate:_statusItem];
+}
 
 
 @end

@@ -18,12 +18,13 @@
 
 #pragma mark - APM Lifecycle
 
--(instancetype)init {
+-(instancetype)initWithDelegate:(id<APMProtocolDelegate>)delegate {
     self = [super init];
     
     if (self) {
         _currentApm = 0;
         _actionsInSecond = 0;
+        _delegate = delegate;
         [self initialize];
         [self bindApmEvents];
         [self startTimer];
@@ -52,9 +53,14 @@
 #pragma mark - APM Events
 
 -(void)bindApmEvents {
-    [NSEvent addGlobalMonitorForEventsMatchingMask:(NSLeftMouseDownMask | NSRightMouseDownMask | NSOtherMouseDownMask | NSKeyDownMask) handler:^(NSEvent *event) {
-        [self apmEvent:event];
-    }];
+    
+    AppDelegate *appDelegate = (AppDelegate *)[NSApp delegate];
+    
+    if (appDelegate.accessibilityEnabled) {
+        [NSEvent addGlobalMonitorForEventsMatchingMask:(NSLeftMouseDownMask | NSRightMouseDownMask | NSOtherMouseDownMask | NSKeyDownMask) handler:^(NSEvent *event) {
+            [self apmEvent:event];
+        }];
+    }
 }
 
 -(void)apmEvent:(NSEvent *)event {

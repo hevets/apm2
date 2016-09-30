@@ -106,7 +106,7 @@
 				D3467E2A1D9EDD67002F156B /* Protocols */,
 				C49C2C241D9DBBE30051B9D8 /* Models */,
 				C49C2C1A1D9D88210051B9D8 /* Storyboard */,
-				C49C2C191D9D880D0051B9D8 /* Controllers */,
+				C49C2C191D9D880D0051B9D8 /* Components */,
 				C49C2BEC1D9D851C0051B9D8 /* Supporting Files */,
 			);
 			path = apm;
@@ -142,13 +142,13 @@
 			path = apmUITests;
 			sourceTree = "<group>";
 		};
-		C49C2C191D9D880D0051B9D8 /* Controllers */ = {
+		C49C2C191D9D880D0051B9D8 /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				C49C2C1E1D9D8AD30051B9D8 /* ApmStatusItem.h */,
 				C49C2C1F1D9D8AD30051B9D8 /* ApmStatusItem.m */,
 			);
-			name = Controllers;
+			name = Components;
 			sourceTree = "<group>";
 		};
 		C49C2C1A1D9D88210051B9D8 /* Storyboard */ = {
