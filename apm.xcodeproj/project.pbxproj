@@ -52,6 +52,7 @@
 		C49C2C1C1D9D885B0051B9D8 /* APM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APM.m; sourceTree = "<group>"; };
 		C49C2C1E1D9D8AD30051B9D8 /* ApmStatusItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApmStatusItem.h; sourceTree = "<group>"; };
 		C49C2C1F1D9D8AD30051B9D8 /* ApmStatusItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApmStatusItem.m; sourceTree = "<group>"; };
+		D3467E2B1D9EDD80002F156B /* APMProtocolDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APMProtocolDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +103,7 @@
 		C49C2BE81D9D851C0051B9D8 /* apm */ = {
 			isa = PBXGroup;
 			children = (
+				D3467E2A1D9EDD67002F156B /* Protocols */,
 				C49C2C241D9DBBE30051B9D8 /* Models */,
 				C49C2C1A1D9D88210051B9D8 /* Storyboard */,
 				C49C2C191D9D880D0051B9D8 /* Controllers */,
@@ -164,6 +166,14 @@
 				C49C2C1C1D9D885B0051B9D8 /* APM.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		D3467E2A1D9EDD67002F156B /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				D3467E2B1D9EDD80002F156B /* APMProtocolDelegate.h */,
+			);
+			name = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -537,6 +547,7 @@
 				C49C2C121D9D851C0051B9D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C49C2C131D9D851C0051B9D8 /* Build configuration list for PBXNativeTarget "apmTests" */ = {
 			isa = XCConfigurationList;
@@ -545,6 +556,7 @@
 				C49C2C151D9D851C0051B9D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C49C2C161D9D851C0051B9D8 /* Build configuration list for PBXNativeTarget "apmUITests" */ = {
 			isa = XCConfigurationList;
@@ -553,6 +565,7 @@
 				C49C2C181D9D851C0051B9D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

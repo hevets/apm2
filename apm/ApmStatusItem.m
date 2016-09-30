@@ -28,7 +28,6 @@
 -(void)configureItem {
     [self configureItemProperties];
     [self configureItemMenu];
-    [self configureUpdateSequence];
 }
 
 -(void)configureItemProperties {
@@ -44,15 +43,10 @@
     _item.menu = menu;
 }
 
--(void)configureUpdateSequence {
-    _timer = [NSTimer timerWithTimeInterval:1.0 target:self selector:@selector(updateStatusItem) userInfo:nil repeats:YES];
-}
+#pragma mark - Apm Protocol
 
-#pragma mark - Item actions
-
--(void)updateStatusItem {
-    NSLog(@"updated status update");
-    _item.title = [self.delegate statusUpdate];
+-(void)apmHasUpdated:(NSString *)updatedApm {
+    _item.title = updatedApm;
 }
 
 @end

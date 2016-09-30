@@ -8,7 +8,8 @@
 
 #import "ApmStatusItem.h"
 #import <Foundation/Foundation.h>
+#import "APMProtocolDelegate.h"
 
-@interface APM : NSObject <StatusItemProtocol>
--(NSString *)statusUpdate;
+@interface APM : NSObject
+@property (nonatomic, weak) id<APMProtocolDelegate> delegate;
 @end

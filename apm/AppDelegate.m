@@ -20,7 +20,9 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     _apm = [[APM alloc] init];
     _statusItem = [[ApmStatusItem alloc] init];
-    _statusItem.delegate = _apm;
+    
+    // binds the _statusItem as the delegate
+    [_apm setDelegate:_statusItem];
 }
 
 
