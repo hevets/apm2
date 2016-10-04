@@ -40,16 +40,9 @@
 
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     if ([object isKindOfClass:[APM class]]) {
-        _item.title = [NSString stringWithFormat:@"%lu", (unsigned long)((APM *)object).currentApm];
+        __weak APM *apm = ((APM *)object);
+        _item.title = [NSString stringWithFormat:@"%lu", (unsigned long)apm.currentApm];
     }
-}
-
-#pragma mark - Apm Protocol
-
--(void)apmHasUpdated:(NSString *)updatedApm {
-    
-    // this thing should only happen on the KVO path now
-    _item.title = updatedApm;
 }
 
 @end
