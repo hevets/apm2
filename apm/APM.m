@@ -7,7 +7,7 @@
 
 // not sure if we'll need this
 @property (nonatomic, assign) NSUInteger actionsInSecond;
-@property (nonatomic, assign) NSUInteger currentApm;
+
 
 // my event loop
 @property (nonatomic, strong) NSTimer *timer;
@@ -18,13 +18,12 @@
 
 #pragma mark - APM Lifecycle
 
--(instancetype)initWithDelegate:(id<APMProtocolDelegate>)delegate {
+-(instancetype)init {
     self = [super init];
     
     if (self) {
         _currentApm = 0;
         _actionsInSecond = 0;
-        _delegate = delegate;
         [self initialize];
         [self bindApmEvents];
         [self startTimer];
@@ -53,7 +52,6 @@
 #pragma mark - APM Events
 
 -(void)bindApmEvents {
-    
     AppDelegate *appDelegate = (AppDelegate *)[NSApp delegate];
     
     if (appDelegate.accessibilityEnabled) {
@@ -76,10 +74,7 @@
     // remove the last item in the array
     [_actionsPerMinute removeObjectAtIndex:[_actionsPerMinute count] - 1];
     
-    _currentApm = [self reduceApm];
-    
-    // update the status after we've gotten our current apm
-    [self statusUpdate];
+    [self setCurrentApm:[self reduceApm]];
 }
 
 -(NSUInteger)reduceApm {
@@ -97,8 +92,18 @@
     return lastSecond;
 }
 
--(void)statusUpdate {
-    [self.delegate apmHasUpdated:[NSString stringWithFormat:@"%lu", (unsigned long)_currentApm]];
+-(void)registerAsObserverForObject:(id)obj forKeyPath:(NSString *)keyPath {
+    [self addObserver:obj
+                  forKeyPath:keyPath
+                     options:(NSKeyValueObservingOptionNew |
+                              NSKeyValueObservingOptionOld)
+                     context:nil];
+}
+
+-(void)unregisterAsObserverForObject:(id)obj forKeyPath:(NSString *)keyPath {
+    [obj removeObserver:self
+                 forKeyPath:keyPath
+                    context:nil];
 }
 
 @end

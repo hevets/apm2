@@ -1,9 +1,6 @@
 #import <Cocoa/Cocoa.h>
 #import <Foundation/Foundation.h>
-#import "APMProtocolDelegate.h"
 
-@interface ApmStatusItem : NSObject<APMProtocolDelegate>
-
+@interface ApmStatusItem : NSObject
 @property (nonatomic, strong) NSStatusItem *item;
--(void)apmHasUpdated:(NSString *)updatedApm;
 @end

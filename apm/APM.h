@@ -1,12 +1,17 @@
 #import "ApmStatusItem.h"
 #import "AppDelegate.h"
 #import <Foundation/Foundation.h>
-#import "APMProtocolDelegate.h"
 
 @interface APM : NSObject
 
-@property (nonatomic, weak) id<APMProtocolDelegate> delegate;
+// expose as a KVO value
+@property (nonatomic, assign) NSUInteger currentApm;
 
--(instancetype)init NS_UNAVAILABLE;
--(instancetype)initWithDelegate:(id<APMProtocolDelegate>)delegate;
+// initializers
+-(instancetype)init;
+
+// registers object to observe changes to keyPath
+-(void)registerAsObserverForObject:(id)obj forKeyPath:(NSString *)keyPath;
+-(void)unregisterAsObserverForObject:(id)obj forKeyPath:(NSString *)keyPath;
+
 @end

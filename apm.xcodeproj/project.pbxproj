@@ -52,7 +52,6 @@
 		C49C2C1C1D9D885B0051B9D8 /* APM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APM.m; sourceTree = "<group>"; };
 		C49C2C1E1D9D8AD30051B9D8 /* ApmStatusItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApmStatusItem.h; sourceTree = "<group>"; };
 		C49C2C1F1D9D8AD30051B9D8 /* ApmStatusItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApmStatusItem.m; sourceTree = "<group>"; };
-		D3467E2B1D9EDD80002F156B /* APMProtocolDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APMProtocolDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,7 +170,6 @@
 		D3467E2A1D9EDD67002F156B /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				D3467E2B1D9EDD80002F156B /* APMProtocolDelegate.h */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";

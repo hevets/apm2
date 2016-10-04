@@ -12,6 +12,11 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     [self checkAccessibility];
     [self startApp];
+    [self registerListeners];
+}
+
+-(void)applicationWillTerminate:(NSNotification *)notification {
+    [self removeListeners];
 }
 
 -(void)checkAccessibility {
@@ -21,8 +26,15 @@
 
 -(void)startApp {
     _statusItem = [[ApmStatusItem alloc] init];
-    _apm = [[APM alloc] initWithDelegate:_statusItem];
+    _apm = [[APM alloc] init];
 }
 
+-(void)registerListeners {
+    [_apm registerAsObserverForObject:_statusItem forKeyPath:@"currentApm"];
+}
+
+-(void)removeListeners {
+    [_apm unregisterAsObserverForObject:_statusItem forKeyPath:@"currentApm"];
+}
 
 @end
