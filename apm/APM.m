@@ -1,17 +1,15 @@
 #import "APM.h"
 
-@interface APM()
+// constants
+static NSTimeInterval const TIME_INTERVAL = 0.2;
 
+@interface APM()
 // stores the different actions in the array
 @property (nonatomic, strong) NSMutableArray *actionsPerMinute;
-
 // not sure if we'll need this
 @property (nonatomic, assign) NSUInteger actionsInSecond;
-
-
 // my event loop
 @property (nonatomic, strong) NSTimer *timer;
-
 @end
 
 @implementation APM
@@ -25,7 +23,6 @@
         _currentApm = 0;
         _actionsInSecond = 0;
         [self initialize];
-        [self bindApmEvents];
         [self startTimer];
     }
     
@@ -46,22 +43,12 @@
 }
 
 -(void)startTimer {
-    _timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(calculateApm) userInfo:nil repeats:YES];
+    _timer = [NSTimer scheduledTimerWithTimeInterval:TIME_INTERVAL target:self selector:@selector(calculateApm) userInfo:nil repeats:YES];
 }
 
 #pragma mark - APM Events
 
--(void)bindApmEvents {
-    AppDelegate *appDelegate = (AppDelegate *)[NSApp delegate];
-    
-    if (appDelegate.accessibilityEnabled) {
-        [NSEvent addGlobalMonitorForEventsMatchingMask:(NSLeftMouseDownMask | NSRightMouseDownMask | NSOtherMouseDownMask | NSKeyDownMask) handler:^(NSEvent *event) {
-            [self apmEvent:event];
-        }];
-    }
-}
-
--(void)apmEvent:(NSEvent *)event {
+-(void)triggerEvent:(NSEvent *)event {
     _actionsInSecond += 1;
 }
 
@@ -95,8 +82,7 @@
 -(void)registerAsObserverForObject:(id)obj forKeyPath:(NSString *)keyPath {
     [self addObserver:obj
                   forKeyPath:keyPath
-                     options:(NSKeyValueObservingOptionNew |
-                              NSKeyValueObservingOptionOld)
+                     options:(NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld)
                      context:nil];
 }
 

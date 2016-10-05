@@ -10,6 +10,9 @@
 // initializers
 -(instancetype)init;
 
+// track events
+-(void)triggerEvent:(NSEvent *)event;
+
 // registers object to observe changes to keyPath
 -(void)registerAsObserverForObject:(id)obj forKeyPath:(NSString *)keyPath;
 -(void)unregisterAsObserverForObject:(id)obj forKeyPath:(NSString *)keyPath;

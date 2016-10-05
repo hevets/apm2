@@ -41,8 +41,12 @@
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     if ([object isKindOfClass:[APM class]]) {
         __weak APM *apm = ((APM *)object);
-        _item.title = [NSString stringWithFormat:@"%lu", (unsigned long)apm.currentApm];
+        [self updateTitle:[NSString stringWithFormat:@"%lu", (unsigned long)apm.currentApm]];
     }
+}
+
+-(void)updateTitle:(NSString *)title {
+    _item.title = title;
 }
 
 @end
