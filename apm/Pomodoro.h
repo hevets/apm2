@@ -8,6 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+
+
 @interface Pomodoro : NSObject
+
 @property (nonatomic, assign) int timeLimit;
+@property (nonatomic, assign) int taskLimit;
+@property (nonatomic, assign) int breakLimit;
 @end

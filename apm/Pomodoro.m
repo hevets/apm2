@@ -7,11 +7,19 @@
 //
 
 #import "Pomodoro.h"
-
-@interface Pomodoro()
-
-@end
+#import "Constants.h"
 
 @implementation Pomodoro
+
+-(instancetype)init {
+    self = [super init];
+    
+    if (self) {
+        _taskLimit = TASK_LIMIT;
+        _breakLimit = BREAK_LIMIT;
+    }
+    
+    return self;
+}
 
 @end

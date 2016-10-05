@@ -9,14 +9,16 @@
 /* Begin PBXBuildFile section */
 		C40C83351DA492E6002FB32A /* Pomodoro.m in Sources */ = {isa = PBXBuildFile; fileRef = C40C83341DA492E6002FB32A /* Pomodoro.m */; };
 		C40C83371DA49309002FB32A /* PomodoroTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C40C83361DA49309002FB32A /* PomodoroTests.m */; };
+		C47E8B9A1DA5671500D9DE6B /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = C47E8B991DA5671500D9DE6B /* Constants.m */; };
 		C49C2BEB1D9D851C0051B9D8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C49C2BEA1D9D851C0051B9D8 /* AppDelegate.m */; };
 		C49C2BEE1D9D851C0051B9D8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C49C2BED1D9D851C0051B9D8 /* main.m */; };
 		C49C2BF31D9D851C0051B9D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C49C2BF21D9D851C0051B9D8 /* Assets.xcassets */; };
 		C49C2BF61D9D851C0051B9D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C49C2BF41D9D851C0051B9D8 /* Main.storyboard */; };
-		C49C2C011D9D851C0051B9D8 /* apmTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C49C2C001D9D851C0051B9D8 /* apmTests.m */; };
 		C49C2C0C1D9D851C0051B9D8 /* apmUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C49C2C0B1D9D851C0051B9D8 /* apmUITests.m */; };
 		C49C2C1D1D9D885B0051B9D8 /* APM.m in Sources */ = {isa = PBXBuildFile; fileRef = C49C2C1C1D9D885B0051B9D8 /* APM.m */; };
 		C49C2C201D9D8AD30051B9D8 /* ApmStatusItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C49C2C1F1D9D8AD30051B9D8 /* ApmStatusItem.m */; };
+		C49F2B651DA59DFD00FBD7FC /* SettingsWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = C49F2B631DA59DFD00FBD7FC /* SettingsWindowController.m */; };
+		C49F2B661DA59DFD00FBD7FC /* SettingsWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C49F2B641DA59DFD00FBD7FC /* SettingsWindowController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		C40C83331DA492E6002FB32A /* Pomodoro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pomodoro.h; sourceTree = "<group>"; };
 		C40C83341DA492E6002FB32A /* Pomodoro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pomodoro.m; sourceTree = "<group>"; };
 		C40C83361DA49309002FB32A /* PomodoroTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PomodoroTests.m; sourceTree = "<group>"; };
+		C47E8B981DA5671500D9DE6B /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		C47E8B991DA5671500D9DE6B /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		C49C2BE61D9D851C0051B9D8 /* apm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = apm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C49C2BE91D9D851C0051B9D8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C49C2BEA1D9D851C0051B9D8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -48,7 +52,6 @@
 		C49C2BF51D9D851C0051B9D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C49C2BF71D9D851C0051B9D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C49C2BFC1D9D851C0051B9D8 /* apmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = apmTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C49C2C001D9D851C0051B9D8 /* apmTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = apmTests.m; sourceTree = "<group>"; };
 		C49C2C021D9D851C0051B9D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C49C2C071D9D851C0051B9D8 /* apmUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = apmUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C49C2C0B1D9D851C0051B9D8 /* apmUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = apmUITests.m; sourceTree = "<group>"; };
@@ -57,6 +60,9 @@
 		C49C2C1C1D9D885B0051B9D8 /* APM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APM.m; sourceTree = "<group>"; };
 		C49C2C1E1D9D8AD30051B9D8 /* ApmStatusItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ApmStatusItem.h; sourceTree = "<group>"; };
 		C49C2C1F1D9D8AD30051B9D8 /* ApmStatusItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApmStatusItem.m; sourceTree = "<group>"; };
+		C49F2B621DA59DFD00FBD7FC /* SettingsWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsWindowController.h; sourceTree = "<group>"; };
+		C49F2B631DA59DFD00FBD7FC /* SettingsWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsWindowController.m; sourceTree = "<group>"; };
+		C49F2B641DA59DFD00FBD7FC /* SettingsWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsWindowController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +113,10 @@
 		C49C2BE81D9D851C0051B9D8 /* apm */ = {
 			isa = PBXGroup;
 			children = (
+				C49C2BE91D9D851C0051B9D8 /* AppDelegate.h */,
+				C49C2BEA1D9D851C0051B9D8 /* AppDelegate.m */,
+				C49F2B5E1DA59D2A00FBD7FC /* Controllers */,
+				C49F2B5B1DA596AC00FBD7FC /* Views */,
 				D3467E2A1D9EDD67002F156B /* Protocols */,
 				C49C2C241D9DBBE30051B9D8 /* Models */,
 				C49C2C1A1D9D88210051B9D8 /* Storyboard */,
@@ -119,11 +129,11 @@
 		C49C2BEC1D9D851C0051B9D8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				C49C2BE91D9D851C0051B9D8 /* AppDelegate.h */,
-				C49C2BEA1D9D851C0051B9D8 /* AppDelegate.m */,
 				C49C2BF21D9D851C0051B9D8 /* Assets.xcassets */,
 				C49C2BF71D9D851C0051B9D8 /* Info.plist */,
 				C49C2BED1D9D851C0051B9D8 /* main.m */,
+				C47E8B981DA5671500D9DE6B /* Constants.h */,
+				C47E8B991DA5671500D9DE6B /* Constants.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -131,7 +141,6 @@
 		C49C2BFF1D9D851C0051B9D8 /* apmTests */ = {
 			isa = PBXGroup;
 			children = (
-				C49C2C001D9D851C0051B9D8 /* apmTests.m */,
 				C40C83361DA49309002FB32A /* PomodoroTests.m */,
 				C49C2C021D9D851C0051B9D8 /* Info.plist */,
 			);
@@ -173,6 +182,23 @@
 				C40C83341DA492E6002FB32A /* Pomodoro.m */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		C49F2B5B1DA596AC00FBD7FC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C49F2B641DA59DFD00FBD7FC /* SettingsWindowController.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		C49F2B5E1DA59D2A00FBD7FC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C49F2B621DA59DFD00FBD7FC /* SettingsWindowController.h */,
+				C49F2B631DA59DFD00FBD7FC /* SettingsWindowController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 		D3467E2A1D9EDD67002F156B /* Protocols */ = {
@@ -292,6 +318,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C49C2BF31D9D851C0051B9D8 /* Assets.xcassets in Resources */,
+				C49F2B661DA59DFD00FBD7FC /* SettingsWindowController.xib in Resources */,
 				C49C2BF61D9D851C0051B9D8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,11 +344,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C49F2B651DA59DFD00FBD7FC /* SettingsWindowController.m in Sources */,
 				C40C83351DA492E6002FB32A /* Pomodoro.m in Sources */,
 				C49C2C1D1D9D885B0051B9D8 /* APM.m in Sources */,
 				C49C2BEE1D9D851C0051B9D8 /* main.m in Sources */,
 				C49C2BEB1D9D851C0051B9D8 /* AppDelegate.m in Sources */,
 				C49C2C201D9D8AD30051B9D8 /* ApmStatusItem.m in Sources */,
+				C47E8B9A1DA5671500D9DE6B /* Constants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,7 +359,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C40C83371DA49309002FB32A /* PomodoroTests.m in Sources */,
-				C49C2C011D9D851C0051B9D8 /* apmTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

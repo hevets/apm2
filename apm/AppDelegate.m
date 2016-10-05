@@ -1,13 +1,14 @@
 #import "APM.h"
 #import "AppDelegate.h"
 #import "ApmStatusItem.h"
+#import "SettingsWindowController.h"
 
 @interface AppDelegate ()
 @property (nonatomic, strong) ApmStatusItem *statusItem;
 @property (nonatomic, strong) APM *apm;
 @end
 
-@implementation AppDelegate
+@implementation AppDelegate 
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     // check to see if we have permissions to track events
@@ -23,18 +24,16 @@
     [self attachListeners];
 }
 
--(void)applicationWillTerminate:(NSNotification *)notification {
-    [self removeListeners];
+-(void)checkAccessibility {
+    NSDictionary *options = @{ (id)CFBridgingRelease(kAXTrustedCheckOptionPrompt) : @YES };
+    _accessibilityEnabled = AXIsProcessTrustedWithOptions((CFDictionaryRef)options);
 }
 
 -(void)startApp {
     _statusItem = [[ApmStatusItem alloc] init];
+    _statusItem.delegate = self;
+    
     _apm = [[APM alloc] init];
-}
-
--(void)checkAccessibility {
-    NSDictionary *options = @{ (id)CFBridgingRelease(kAXTrustedCheckOptionPrompt) : @YES };
-    _accessibilityEnabled = AXIsProcessTrustedWithOptions((CFDictionaryRef)options);
 }
 
 -(void)registerEventListener {
@@ -49,8 +48,12 @@
     [_apm registerAsObserverForObject:_statusItem forKeyPath:@"currentApm"];
 }
 
--(void)removeListeners {
-    [_apm unregisterAsObserverForObject:_statusItem forKeyPath:@"currentApm"];
+-(void)settings {
+//    SettingsWindowController *wc = [[NSStoryboard storyboardWithName:@"Main" bundle:nil] instantiateControllerWithIdentifier:@"SettingsWindowController"];
+//    self
+    
+     NSWindowController *wc = [[SettingsWindowController alloc] initWithWindowNibName:@"SettingsWindowController"];
+    
 }
 
 @end
