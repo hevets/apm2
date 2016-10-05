@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C40C83351DA492E6002FB32A /* Pomodoro.m in Sources */ = {isa = PBXBuildFile; fileRef = C40C83341DA492E6002FB32A /* Pomodoro.m */; };
+		C40C83371DA49309002FB32A /* PomodoroTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C40C83361DA49309002FB32A /* PomodoroTests.m */; };
 		C49C2BEB1D9D851C0051B9D8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C49C2BEA1D9D851C0051B9D8 /* AppDelegate.m */; };
 		C49C2BEE1D9D851C0051B9D8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C49C2BED1D9D851C0051B9D8 /* main.m */; };
 		C49C2BF31D9D851C0051B9D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C49C2BF21D9D851C0051B9D8 /* Assets.xcassets */; };
@@ -35,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C40C83331DA492E6002FB32A /* Pomodoro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pomodoro.h; sourceTree = "<group>"; };
+		C40C83341DA492E6002FB32A /* Pomodoro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pomodoro.m; sourceTree = "<group>"; };
+		C40C83361DA49309002FB32A /* PomodoroTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PomodoroTests.m; sourceTree = "<group>"; };
 		C49C2BE61D9D851C0051B9D8 /* apm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = apm.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C49C2BE91D9D851C0051B9D8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C49C2BEA1D9D851C0051B9D8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -127,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				C49C2C001D9D851C0051B9D8 /* apmTests.m */,
+				C40C83361DA49309002FB32A /* PomodoroTests.m */,
 				C49C2C021D9D851C0051B9D8 /* Info.plist */,
 			);
 			path = apmTests;
@@ -163,6 +169,8 @@
 			children = (
 				C49C2C1B1D9D885B0051B9D8 /* APM.h */,
 				C49C2C1C1D9D885B0051B9D8 /* APM.m */,
+				C40C83331DA492E6002FB32A /* Pomodoro.h */,
+				C40C83341DA492E6002FB32A /* Pomodoro.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -309,6 +317,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C40C83351DA492E6002FB32A /* Pomodoro.m in Sources */,
 				C49C2C1D1D9D885B0051B9D8 /* APM.m in Sources */,
 				C49C2BEE1D9D851C0051B9D8 /* main.m in Sources */,
 				C49C2BEB1D9D851C0051B9D8 /* AppDelegate.m in Sources */,
@@ -320,6 +329,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C40C83371DA49309002FB32A /* PomodoroTests.m in Sources */,
 				C49C2C011D9D851C0051B9D8 /* apmTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
